@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs"
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 interface NavItem {
     label: string;
@@ -16,44 +17,87 @@ const NavbarItems: Array<NavItem> = [
 
 
 export const Navbar = () => {
-
+    // theme
     const [darkTheme, setDarkTheme] = useState(false);
-    function toggleTheme(){
-        setDarkTheme(!darkTheme);
-        document.documentElement.setAttribute('data-theme', darkTheme ? "light" : "dark");
-    }
+    function toggleTheme() { setDarkTheme(!darkTheme); document.documentElement.setAttribute('data-theme', darkTheme ? "light" : "dark"); }
 
-    return (<header className="w-full mx-auto fixed top-0 shadow ">
+    // topdown
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+    return (<header className="w-full mx-auto fixed top-0  ">
         {/* navbar container */}
-        <div className="md:flex justify-between items-center md:py-3 md:px-7 ">
+        <div className="flex justify-between items-center md:py-3 md:px-7 px-4 py-2">
+
+
+
+
 
             {/* icon container*/}
             <div>
-               <a href="home"><h1 className="md:text-2xl text-xl font-extrabold">Fevzi Atanoglu</h1></a> 
+                <a href="home"><h1 className="md:text-2xl text-xl font-extrabold">Fevzi Atanoglu</h1></a>
             </div>
 
-            {/* links container */}
-            <div className="md:flex items-center  space-x-10">
+
+
+
+
+            {/*dropdown menu button */}
+            <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="md:hidden">
+                {!isDropdownOpen ? <AiOutlineMenu size={25} /> : <AiOutlineClose size={25} />}
+            </button>
+
+            {/* dropdown menu */}
+            {isDropdownOpen && <div className="dropdown absolute top-14 right-5 rounded-lg flex flex-col p-5 justify-center items-center gap-5 shadow-xl">
+
                 {/* link */}
                 {NavbarItems.map((item, index) => {
                     return <a href={item.page} key={index}>{item.label}</a>
                 })}
 
+                <hr></hr>
+
                 {/* toggle button */}
                 <div
                     onClick={() => toggleTheme()}
                     className="toggle-button bg-red-500">
-                        
                     <div className={`toggle-dot bg-green-50 flex justify-center items-center ${darkTheme && "toggle-dot-active"}`}>
-                        {darkTheme ? <BsFillMoonFill /> : <BsFillSunFill  />}
+                        {darkTheme ? <BsFillMoonFill /> : <BsFillSunFill />}
                     </div>
-
                     <div className={`toggle-icon flex justify-center items-center ${darkTheme && "toggle-icon-active"}`}>
-                         {!darkTheme ? <BsFillMoonFill /> : <BsFillSunFill />}
-                        </div>
-
+                        {!darkTheme ? <BsFillMoonFill /> : <BsFillSunFill />}
+                    </div>
                 </div>
+
+
+
+
+            </div>
+            }
+
+
+            {/* links container */}
+            <div className="hidden md:flex   items-center  space-x-10  ">
+
+
+                {/* link */}
+                {NavbarItems.map((item, index) => {
+                    return <a href={item.page} key={index}>{item.label}</a>
+                })}
+
+
+                {/* toggle button */}
+                <div
+                    onClick={() => toggleTheme()}
+                    className="toggle-button bg-red-500">
+                    <div className={`toggle-dot bg-green-50 flex justify-center items-center ${darkTheme && "toggle-dot-active"}`}>
+                        {darkTheme ? <BsFillMoonFill /> : <BsFillSunFill />}
+                    </div>
+                    <div className={`toggle-icon flex justify-center items-center ${darkTheme && "toggle-icon-active"}`}>
+                        {!darkTheme ? <BsFillMoonFill /> : <BsFillSunFill />}
+                    </div>
+                </div>
+
+
             </div>
 
 
