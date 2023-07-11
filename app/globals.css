@@ -8,23 +8,24 @@
   --background-end-rgb: 255, 255, 255;
 
 
-  --main-bg :linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(221,219,219,1) 50%);
-  --secondary-bg :linear-gradient(326deg, rgba(138,212,254,1) 60%, rgba(234,234,234,1) 100%);
+  --main-bg: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(221, 219, 219, 1) 50%);
+  --secondary-bg: linear-gradient(326deg, rgba(138, 212, 254, 1) 60%, rgba(234, 234, 234, 1) 100%);
 
-  --dark-color:rgb(22, 26, 40);
+  --dark-color: rgb(22, 26, 40);
 
-  --transparent-bg :rgba(255, 255, 255, 0.5);
-  --text-color : brown;
+  --transparent-bg: rgba(255, 255, 255, 0.5);
+  --text-color: brown;
   --img-filter: none;
 }
-:root[data-theme = "dark"]{
-  --main-bg : linear-gradient(180deg, rgb(22, 26, 40) 10%, rgb(0, 0, 0) 90%);
+
+:root[data-theme="dark"] {
+  --main-bg: linear-gradient(180deg, rgb(22, 26, 40) 10%, rgb(0, 0, 0) 90%);
   --secondary-bg: linear-gradient(55deg, rgb(10, 29, 48) 0%, rgb(21, 64, 86) 100%);
 
-  --dark-color:rgba(221,219,219,1);
+  --dark-color: rgba(221, 219, 219, 1);
 
-  --transparent-bg :rgba(0, 0, 0, 0.255);
-  --text-color : white;
+  --transparent-bg: rgba(0, 0, 0, 0.255);
+  --text-color: white;
   --img-filter: brightness(5);
 
 }
@@ -42,6 +43,9 @@
     --img-filter: brightness(5);
   }
 } */
+html{
+  scroll-behavior: smooth;
+}
 
 body {
   transition: .5s;
@@ -53,25 +57,27 @@ body {
     )
     rgb(var(--background-start-rgb)); */
 
-    background: var(--main-bg);
-    background-repeat: no-repeat;
-    /* background: fixed; */
+  background: var(--main-bg);
+  background-repeat: no-repeat;
+  /* background: fixed; */
 
-    color: var(--text-color);
+  color: var(--text-color);
+
+ 
 }
 
 /* ==========================   header     ========================== */
-header{
+header {
   background: var(--secondary-bg);
   font-weight: 500;
   border-bottom: 1px solid var(--dark-color);
 }
 
-a:hover{
+a:hover {
   opacity: 0.5;
 }
 
-.dropdown{
+.dropdown {
   background: var(--main-bg);
 }
 
@@ -119,12 +125,13 @@ a:hover{
 .toggle-dot-active {
   transform: translateX(80%);
 }
+
 /* ========================== toggle button ========================== */
 
 
-section{
+section {
 
-  height : 100vh;
+  height: 100vh;
 
   display: flex;
   justify-content: center;
@@ -133,6 +140,22 @@ section{
 
 .img-container {
   background: var(--secondary-bg);
-   border: 5px solid white;
+  border: 5px solid white;
+
+}
+
+
+.bounce {
+  animation: bounce 0.5s alternate infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+   90%, 100% {
+    transform: translateY(10px);
+  }
 
 }

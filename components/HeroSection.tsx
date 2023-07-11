@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link';
 import React from 'react'
 
 import { AiFillGithub, AiFillLinkedin, AiOutlineDown } from "react-icons/ai";
@@ -15,7 +16,7 @@ export const HeroSection = () => {
                 </div>
 
                 <div className="flex flex-col justify-center">
-                    <h2 className='text-lg font-semibold text-center'>Hello I'm Fevzi , I'm a</h2>
+                    <h2 className=' text-lg font-semibold text-center'>Hello I'm <span className='md:text-2xl text-xl font-extrabold'>Fevzi</span> , I'm a</h2>
                     <h1 className='md:text-7xl text-3xl text-center font-extrabold'>Full Stack Developer</h1>
 
                     <div className='md:px-20 md:my-10 my-5   flex justify-around items-center font-semibold'>
@@ -28,10 +29,10 @@ export const HeroSection = () => {
             </div>
 
             <div className=' w-full mt-24 flex  justify-center'>
-
-                <a href='' className='flex flex-col items-center '>
+                {/* className='flex flex-col items-center ' */}
+                <a href="#about" className='flex flex-col items-center'>
                     <div className='text-sm'>learn more</div>
-                    <AiOutlineDown size={30} />
+                    <AiOutlineDown className='bounce' size={30} />
                 </a>
             </div>
 
