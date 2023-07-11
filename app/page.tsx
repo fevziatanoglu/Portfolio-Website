@@ -1,4 +1,12 @@
+import AboutSection from "@/components/AboutSection";
+import { HeroSection } from "@/components/HeroSection";
+
 
 export default function Home() {
-  return (<div className='mt-16 h-[1000px]'>Hello world</div>)
+
+  return (<main className="mx-auto max-w-4xl ">
+    <HeroSection />
+    <AboutSection />
+    </main>)
+
 }

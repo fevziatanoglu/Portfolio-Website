@@ -24,7 +24,7 @@ export const Navbar = () => {
     // topdown
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-    return (<header className="w-full mx-auto fixed top-0  ">
+    return (<header className="w-full mx-auto p-2 fixed top-0  ">
         {/* navbar container */}
         <div className="flex justify-between items-center md:py-3 md:px-7 px-4 py-2">
 
@@ -34,7 +34,7 @@ export const Navbar = () => {
 
             {/* icon container*/}
             <div>
-                <a href="home"><h1 className="md:text-2xl text-xl font-extrabold">Fevzi Atanoglu</h1></a>
+                <a href="home"><h1 className="text-2xl font-semibold ">Fevzi Atanoglu</h1></a>
             </div>
 
 

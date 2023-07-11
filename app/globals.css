@@ -14,7 +14,7 @@
   --dark-color:rgb(22, 26, 40);
 
   --transparent-bg :rgba(255, 255, 255, 0.5);
-  --text-color : black;
+  --text-color : brown;
   --img-filter: none;
 }
 :root[data-theme = "dark"]{
@@ -44,6 +44,7 @@
 } */
 
 body {
+  transition: .5s;
   /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -52,7 +53,7 @@ body {
     )
     rgb(var(--background-start-rgb)); */
 
-    background: var(--secondary-bg);
+    background: var(--main-bg);
     background-repeat: no-repeat;
     /* background: fixed; */
 
@@ -61,12 +62,12 @@ body {
 
 /* ==========================   header     ========================== */
 header{
-  background: var(--main-bg);
+  background: var(--secondary-bg);
   font-weight: 500;
   border-bottom: 1px solid var(--dark-color);
 }
 
-header a:hover{
+a:hover{
   opacity: 0.5;
 }
 
@@ -119,3 +120,19 @@ header a:hover{
   transform: translateX(80%);
 }
 /* ========================== toggle button ========================== */
+
+
+section{
+
+  height : 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container {
+  background: var(--secondary-bg);
+   border: 5px solid white;
+
+}
