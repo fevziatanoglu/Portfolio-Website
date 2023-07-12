@@ -9,9 +9,9 @@ interface NavItem {
 }
 
 const NavbarItems: Array<NavItem> = [
-    { label: "Home", page: "home" },
-    { label: "About Me", page: "about" },
-    { label: "My Projects", page: "projects" }
+    { label: "Home", page: "#home" },
+    { label: "About Me", page: "#about" },
+    { label: "My Projects", page: "#projects" }
 
 ]
 
@@ -34,7 +34,7 @@ export const Navbar = () => {
 
             {/* icon container*/}
             <div>
-                <a href="home"><h1 className="text-2xl font-semibold ">Fevzi Atanoglu</h1></a>
+                <a href="#home"><h1 className="text-2xl font-semibold ">Fevzi Atanoglu</h1></a>
             </div>
 
 

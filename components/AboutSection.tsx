@@ -15,12 +15,13 @@ const skills = [
 
 function AboutSection() {
     return (
-        <section id='about' className='flex flex-col justify-between items-center md:pt-24  '>
-            <div className='flex flex-col  justify-center items-stretch '>
+        <section id='about' className='flex flex-col justify-between items-center md:pt-40 '>
+            <div className='flex flex-col  justify-center items-stretch  md:space-y-10'>
 
                 {/* title */}
-                <div>
+                <div className=''>
                     <h1 className='text-5xl font-extrabold text-center'>About Me</h1>
+                    <hr className='w-10 h-1 mx-auto my-4 bg-teal-500 rounded'></hr>
                 </div>
 
                 {/* content div */}
@@ -28,6 +29,7 @@ function AboutSection() {
 
                     {/* about me  */}
                     <div className=' md:w-1/2 space-y-5 '>
+
                         <h1 className='text-3xl font-bold'>Get Know Me!</h1>
 
                         <p>Hello I'm <span className='font-extrabold'>Fevzi</span>, I'm <span className='font-extrabold'>Computer Engineering</span> student at Bandırma 17 Eylül University.</p>
@@ -41,11 +43,10 @@ function AboutSection() {
 
                     {/* skilss */}
                     <div className=' md:w-1/2 space-y-5'>
-
                         <h1 className='text-3xl font-bold'>My Skilss</h1>
-                        <div className='skills-container flex  flex-wrap flex-row  justify-start items-center gap-x-7 gap-y-3 text-start '>
+                        <div className='skills-container flex  flex-wrap flex-row  justify-start items-center gap-x-3 gap-y-3 text-start '>
                             {skills.map((item, index) => {
-                                return <p className='bg-white py-2 px-5' key={index}>{item.skill}</p>
+                                return <p className='skill-container py-2 px-5' key={index}>{item.skill}</p>
                             })}
 
                         </div>

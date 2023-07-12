@@ -16,6 +16,9 @@
   --transparent-bg: rgba(255, 255, 255, 0.5);
   --text-color: brown;
   --img-filter: none;
+
+  --dark : black;
+  --light : white;
 }
 
 :root[data-theme="dark"] {
@@ -27,6 +30,10 @@
   --transparent-bg: rgba(0, 0, 0, 0.255);
   --text-color: white;
   --img-filter: brightness(5);
+
+
+  --dark : white;
+  --light : black;
 
 }
 
@@ -140,7 +147,7 @@ section {
 
 .img-container {
   background: var(--secondary-bg);
-  border: 5px solid white;
+  border: 5px solid var(--light);
 
 }
 
@@ -158,4 +165,10 @@ section {
     transform: translateY(10px);
   }
 
+}
+
+
+.skill-container{
+  background: var(--dark);
+  color: var(--light);
 }
