@@ -16,7 +16,7 @@ export const HeroSection = () => {
                 </div>
 
                 <div className="flex flex-col justify-center">
-                    <h2 className=' text-lg font-semibold text-center'>Hello I'm <span className='md:text-2xl text-xl font-extrabold'>Fevzi</span> , I'm a</h2>
+                    <h2 className=' text-lg font-semibold text-center'>Hello I&#39;m <span className='md:text-2xl text-xl font-extrabold'>Fevzi</span> , I&#39;m a</h2>
                     <h1 className='md:text-7xl text-3xl text-center font-extrabold'>Full Stack Developer</h1>
 
                     <div className='md:px-20 md:my-10 my-5   flex justify-around items-center font-semibold'>

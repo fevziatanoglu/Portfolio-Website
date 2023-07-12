@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 import { AiOutlineDown } from 'react-icons/ai'
 
@@ -15,7 +16,7 @@ const skills = [
 
 function AboutSection() {
     return (
-        <section id='about' className='flex flex-col justify-between items-center md:pt-40 '>
+        <section id='about' className='flex flex-col justify-between items-center pt-20 md:pt-50'>
             <div className='flex flex-col  justify-center items-stretch  md:space-y-10'>
 
                 {/* title */}
@@ -32,11 +33,11 @@ function AboutSection() {
 
                         <h1 className='text-3xl font-bold'>Get Know Me!</h1>
 
-                        <p>Hello I'm <span className='font-extrabold'>Fevzi</span>, I'm <span className='font-extrabold'>Computer Engineering</span> student at Bandırma 17 Eylül University.</p>
+                        <p>Hello I&#39;m <span className='font-extrabold'>Fevzi</span>, I &#39;m <span className='font-extrabold'>Computer Engineering</span> student at Bandirma 17 Eylül University.</p>
 
                         <p>I am  <span className='font-extrabold'>willed</span>, <span className='font-extrabold'>determined</span>  and <span className='font-extrabold'>love to learn</span>. </p>
 
-                        <p>I'm passionate about <span className='font-extrabold'>Web Development</span>. I develop application by mainly using <span className='font-extrabold'>React.js </span>, <span className='font-extrabold'>Next.js</span> and <span className='font-extrabold'>Angular</span>. </p>
+                        <p>I&#39;m passionate about <span className='font-extrabold'>Web Development</span>. I develop application by mainly using <span className='font-extrabold'>React.js </span>, <span className='font-extrabold'>Next.js</span> and <span className='font-extrabold'>Angular</span>. </p>
 
 
                     </div>
@@ -52,6 +53,11 @@ function AboutSection() {
                         </div>
                     </div>
 
+
+                    <div className='hidden md:block'>
+                        <Image src="/aboutme.png" width={300} height={300} alt='aboutme' />
+                    </div>
+
                 </div>
 
 
@@ -64,6 +70,10 @@ function AboutSection() {
                 </div>
 
             </div>
+
+
+
+
         </section>
     )
 }
