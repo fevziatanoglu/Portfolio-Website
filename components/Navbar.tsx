@@ -24,7 +24,7 @@ export const Navbar = () => {
     // topdown
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-    return (<header className="bg-transparent w-full mx-auto p-2 fixed top-0 z-10  ">
+    return (<header className="w-full mx-auto p-2 fixed top-0 z-10  ">
         {/* navbar container */}
         <div className="flex justify-between items-center md:py-3 md:px-7 px-4 py-2">
 

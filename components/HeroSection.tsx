@@ -22,7 +22,7 @@ export const HeroSection = () => {
                     <div className='md:px-20 md:my-10 my-5   flex justify-around items-center font-semibold'>
                         <a className='social-link flex flex-row justify-center items-center gap-1' target='_blank' href="https://github.com/fevziatanoglu"><AiFillGithub size={30} /> Github</a>
                         <a className='social-link flex flex-row justify-center items-center gap-1' target='_blank' href=""><AiFillLinkedin size={30} /> Linkedn</a>
-                        <a className='social-link flex flex-row justify-center items-center gap-1' target='_blank' href='https://mail.google.com/mail/?view=cm&to=recipient@example.com'><BiLogoGmail size={30} /> Gmail</a>
+                        <a className='social-link flex flex-row justify-center items-center gap-1' target='_blank' href='https://mail.google.com/mail/?view=cm&to=fevziatan2@gmail.com'><BiLogoGmail size={30} /> Gmail</a>
                     </div>
                 </div>
 
