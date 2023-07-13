@@ -3,21 +3,21 @@ import React from 'react'
 
 const projects = [
   {
-    title: "test",
-    decs: "testtes ttesttesttesttest testtesttesttes ttesttesttesttest testtesttest testtesttesttestamk",
-    image: "/test",
-    github: "test",
-    demo: "test",
-    tools: ["test", "test"]
+    title: "Movie App",
+    decs: "I developed this Movie App by using Angular. It allows you to search , saved and see the best movies.",
+    image: "/movie-project.png",
+    github: "https://github.com/fevziatanoglu/Angular-Movie-App",
+    demo: "https://movieinfoapp.vercel.app/",
+    tools: ["Angular", "Bootstrap"]
   },
 
   {
-    title: "test",
-    decs: "test",
-    image: "/test",
-    github: "test",
-    demo: "test",
-    tools: ["test", "test"]
+    title: "Quzilet Clone",
+    decs: "I developed this app by using React , Nodejs and tailwind. It allows you to create account , create a vocabulary list or look other people vocabulary lists.",
+    image: "/quizlet-project.png",
+    github: "https://github.com/fevziatanoglu/React-Quizlet-Clone",
+    demo: "https://react-quizlet-clone.vercel.app/",
+    tools: ["React.js", "Node.js"]
   },
 
 ]
@@ -38,7 +38,7 @@ export const ProjectsSection = () => {
           {projects.map((project, index) => {
             // project div
             return <div key={index}>
-              <div className='flex flex-col md:flex-row project-container rounded shadow-2xl '>
+              <div className='flex flex-col md:flex-row project-container p-10 rounded shadow-2xl '>
                 {/* img div */}
 
                 <div className='md:w-1/2'>
