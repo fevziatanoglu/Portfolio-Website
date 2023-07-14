@@ -24,7 +24,7 @@ const projects = [
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects">
+    <section id="projects" className='flex flex-col justify-between items-center pt-20 md:pt-50'>
       <div>
         {/* title */}
         <div className=''>
