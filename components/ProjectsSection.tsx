@@ -12,7 +12,7 @@ const projects = [
   },
 
   {
-    title: "Quzilet Clone",
+    title: "Quizlet Clone",
     decs: "I developed this app by using React , Nodejs and tailwind. It allows you to create account , create a vocabulary list or look other people vocabulary lists.",
     image: "/quizlet-project.png",
     github: "https://github.com/fevziatanoglu/React-Quizlet-Clone",
@@ -20,11 +20,20 @@ const projects = [
     tools: ["React.js", "Node.js"]
   },
 
+  {
+    title: "React Todo App",
+    decs: "I developed this app by using React , Nodejs and tailwind to learn how to authentication , push and get data by using MongoDB.",
+    image: "/todo-app-project.png",
+    github: "https://github.com/fevziatanoglu/React-Auth-Todo",
+    demo: "https://react-auth-todo.vercel.app/",
+    tools: ["React.js", "Node.js"]
+  },
+
 ]
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className='flex flex-col justify-between items-center pt-20 md:pt-50'>
+    <section id="projects" className='flex h-full flex-col justify-between items-center pt-20 pb-10 md:pt-50'>
       <div>
         {/* title */}
         <div className=''>
