@@ -1,105 +1,95 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* normal theme */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-
-  --main-bg: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(221, 219, 219, 1) 50%);
-  --secondary-bg: linear-gradient(326deg, rgba(138, 212, 254, 1) 60%, rgba(234, 234, 234, 1) 100%);
-
+  --main-bg: #793FDF;
+  --secondary-bg: rgb(255, 230, 100);
+  --secondary-bg-transparent : rgba(255, 230, 100,0.75);
+  --alternative-bg : #7091F5;
   --dark-color: rgb(22, 26, 40);
-
   --transparent-bg: rgba(255, 255, 255, 0.5);
-  --text-color: brown;
+  --text-color: #97FFF4;
   --img-filter: none;
-
   --dark: black;
   --light: white;
 }
-
+/* dark theme */
 :root[data-theme="dark"] {
-  --main-bg: linear-gradient(180deg, rgb(22, 26, 40) 10%, rgb(0, 0, 0) 90%);
-  --secondary-bg: linear-gradient(55deg, rgb(10, 29, 48) 0%, rgb(21, 64, 86) 100%);
-
-  --dark-color: rgba(221, 219, 219, 1);
-
-  --transparent-bg: rgba(0, 0, 0, 0.255);
-  --text-color: white;
-  --img-filter: brightness(5);
-
-
+  --main-bg: gray;
+  --secondary-bg: rgb(44, 28, 28);
+  --alternative-bg : rgb(255, 255, 255);
+  --dark-color: rgb(255, 255, 255);
+  --transparent-bg: rgba(255, 255, 255, 0.5);
+  --text-color: rgb(89, 21, 21);
+  --img-filter: none;
   --dark: white;
   --light: black;
-
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --main-bg : linear-gradient(180deg, rgb(22, 26, 40) 10%, rgb(0, 0, 0) 90%);
-    --secondary-bg: linear-gradient(55deg, rgb(10, 29, 48) 0%, rgb(21, 64, 86) 100%);
-    --transparent-bg :rgba(0, 0, 0, 0.255);
-    --text-color : white;
-    --img-filter: brightness(5);
-  }
-} */
-html {
-  scroll-behavior: smooth;
-}
 
 body {
-  transition: .5s;
-  /* color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
-
+  transition: 0.1s;
   background: var(--main-bg);
   background-repeat: no-repeat;
-  /* background: fixed; */
-
   color: var(--text-color);
-
-
+  padding: 0;
+  margin: 0;
 }
-
 /* ==========================   header     ========================== */
-header {
-  background: var(--secondary-bg);
-  /* background: transparent; */
-  font-weight: 500;
-  border-bottom: 1px solid var(--dark-color);
+header{
+  /* transition: 0.1s; */
+  
 }
 
-a:hover {
-  opacity: 0.5;
+header a {
+  font-weight: 700;
+
+  color: var(--main-bg);
+
+  &:hover{
+    opacity: 0.5;
+  }
+}
+
+header h1{
+  color: var(--secondary-bg);
+}
+
+.scrolled_header {
+  background : var(--secondary-bg-transparent);
+  background-opacity: 0.5;
+  backdrop-filter: blur(10px);
+  color: var(--secondary-bg);
+  border-bottom : 3px solid var(--main-bg);
+}
+
+.scrolled_header  a , .scrolled_header h1{
+  color: var(--main-bg);
+}
+
+.scrolled_header .dropdown-button {
+  color: var(--main-bg);
 }
 
 .dropdown {
   background: var(--main-bg);
 }
 
+.dropdown a {
+  color : var(--secondary-bg);
+}
+
 /* ========================== toggle button ========================== */
 .toggle-button {
-  background: var(--secondary-bg);
+  background: var(--alternative-bg);
   height: 30px;
   width: 70px;
   border-radius: 2rem;
   display: relative;
 
   color: var(--text-color);
-
-  box-shadow: .1px .1px 5px var(--text-color);
+  box-shadow: 0.1px 0.1px 5px var(--text-color);
 }
 
 .toggle-button:hover {
@@ -108,7 +98,7 @@ a:hover {
 
 .toggle-dot {
   z-index: 1;
-  transition: .5s;
+  transition: 0.5s;
   position: absolute;
   background: var(--main-bg);
   border-radius: 2rem;
@@ -117,13 +107,13 @@ a:hover {
 }
 
 .toggle-icon {
-  transition: .5s;
+  transition: 0.5s;
   border-radius: 2rem;
   position: absolute;
+  color: var(--secondary-bg);
   width: 40px;
   height: 30px;
   transform: translateX(80%);
-
 }
 
 .toggle-icon-active {
@@ -134,27 +124,58 @@ a:hover {
   transform: translateX(80%);
 }
 
-/* ========================== toggle button ========================== */
+/* ========================== hero container ========================== */
 
-
-section {
-
-  height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.hero_container_1{
+ background : var(--main-bg)
 }
+
+.hero_container_1  button , a  {
+  
+  &:hover{
+    opacity: 0.5;
+  }
+}
+
+.hero_container_1 .contact-button{
+  background: var(--dark);
+  color: var(--light);
+}
+
+.hero_container_1 .cv-button{
+  background: var(--light);
+  color: var(--dark);
+}
+
+.hero_container_2{
+  background : var(--secondary-bg)
+}
+
 
 .img-container {
-  background: var(--secondary-bg);
+  
   border: 5px solid var(--light);
-
 }
 
+img {
+  background :  var(--light);
+  
+}
 
 .bounce {
   animation: bounce 0.5s alternate infinite;
+}
+
+.light-text{
+  color: var(--light);
+}
+
+.secondary-text{
+  color : var(--main-bg);
+}
+
+.alternative-text{
+  color : var(--secondary-bg);
 }
 
 @keyframes bounce {
@@ -166,22 +187,31 @@ section {
   100% {
     transform: translateY(10px);
   }
-
 }
-
 
 .skill-container {
   background: var(--secondary-bg);
-  color: var(--dark);
+  color: var(--main-bg);
+  
 }
 
-.project-container{
+.skill.container:hover {
+}
+
+.project-container {
   background: var(--secondary-bg);
 }
 
-.project-link{
+.project-link {
   background: var(--dark);
   padding: 1rem 2rem;
   border-radius: 1rem;
-  color : var(--light);
+  color: var(--light);
+}
+
+@media (max-width: 768px) {
+  .img-container {
+    height: 200px;
+    width: 200px;
+  }
 }

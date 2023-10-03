@@ -29,7 +29,7 @@ function AboutSection() {
                 <div className='flex flex-col md:flex-row  justify-between p-5  gap-10 '>
 
                     {/* about me  */}
-                    <div className=' md:w-1/2 space-y-5 '>
+                    <div className='light-text md:w-1/2 space-y-5 '>
 
                         <h1 className='text-3xl font-bold'>Get Know Me!</h1>
 
